@@ -45,5 +45,6 @@ html {
   padding-bottom: 0px;
   background-color: #efefef;
   text-align: center;
+  margin-top: 20px; /* space between content and footer */
   width: 100%;
 }
