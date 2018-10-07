@@ -38,12 +38,12 @@ html {
   padding: 0.5rem;
 }
 
-#footer {
-  bottom: 0;
-  padding-top: 20px;
-  padding-bottom: 0px;
-  background-color: #efefef;
-  text-align: center;
-  margin-top: 20px; /* space between content and footer */
-  width: 100%;
+
+.footer {
+    background-color: #efefef;
+    padding-top: 20px;
+    margin-top: 20px; /* space between content and footer */
+    position: relative;
+    width: 100%;
+	overflow: auto;
 }
