@@ -39,8 +39,10 @@ html {
 }
 
 #footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  left: 20px;
+  right: 20px;
   padding-top: 10px;
   padding-bottom: 0px;
   background-color: #efefef;
