@@ -54,3 +54,15 @@ html {
     width: 100%;
 	overflow: auto;
 }
+
+.scroll-wrapper {
+	-webkit-overflow-scrolling: touch;
+  	overflow-y: scroll;
+
+	/* important:  dimensions or positioning here! */
+}
+
+.scroll-wrapper iframe {
+  height: 100%;
+  width: 100%;
+}
