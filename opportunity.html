@@ -12,18 +12,7 @@
 
 		<!-- CSS to customize styles -->
 		<link href="/assets/css/custom.css" rel="stylesheet">
-		<script type="text/javascript" language="javascript" src="/assets/js/jquery-1.9.1.min.js"></script>
-		<link rel="stylesheet" href="/assets/css/jquery-ui.css" />
-		<script src="/assets/js/jquery-ui.min.js"></script>
-			<style type="text/css" title="currentStyle">
-			        @import "/assets/css/demo_table.css";
-			</style>
-
-		<script src="/assets/js/popper.min.js"></script>
-		<script src="/assets/js/bootstrap.min.js"></script>
-
-
-		<script type="text/javascript" language="javascript" src="/assets/js/jquery.dataTables.min.js"></script>
+		
 		<script type="text/javascript" charset="utf-8">
 			if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 				var msViewportStyle = document.createElement("style");
@@ -37,27 +26,6 @@
 			}
 		</script>
 	
-		<script type="text/javascript" language="javascript" src="/assets/js/clipboard.min.js"></script>
-		
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<style>
-		.card {
-		  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-		  max-width: 500px;
-		  margin: auto;
-		  text-align: center;
-		  font-family: arial;
-		}
-
-		.title {
-		  color: grey;
-		  font-size: 18px;
-		  line-height: 1.2;
-	  	}
-	
-		
-		</style>
-		
 	</head>
 	
 	<body>
@@ -90,6 +58,33 @@
 			NCSU is a public research university (R1) located in beautiful Raleigh at North Carolina. It is a part of the well-known research triangle (NCSU, Duke and UNC). The region's growing high-technology community includes companies such as IBM, SAS Institute, Cisco Systems, NetApp, Red Hat, EMC Corporation; so a lot of internship opportunities. CS@NCSU is ranked 43rd in <a href="https://www.usnews.com/best-graduate-schools/top-science-schools/computer-science-rankings/page+2">USNews</a> and 28th in security and cryptography category at <a href="http://csrankings.org/#/index?sec&crypt">csrankings.org</a>. So consider applying to NCSU!
 			</p>
 		</div>	
+		
+		<footer class="page-footer">
+		  <div class="footer-copyright">
+		      <div class="container">
+		          <span style="float:left;" class="text-muted small">&copy; 2018 Anupam Das</span>
+		          <span style="float:right;" class="text-muted small">This page is hosted on GitHub, please see GitHub's privacy statement
+		          <a href="https://help.github.com/articles/github-privacy-statement/">here</a>.</span>
+		      </div>
+		  </div>
+		</footer>
+
+	    <script>
+	      $(function () {
+	        $('[data-toggle="tooltip"]').tooltip()
+	      })
+	      $('.navbar-nav>li>a').on('click', function(){
+	          $('.navbar-collapse').collapse('hide');
+	      });
+	      // Modified from https://stackoverflow.com/a/49331692
+	      var divId;
+	      $('.nav-link').click(function(){
+	        divId = $(this).attr('href');
+	         $('html, body').animate({
+	          scrollTop: $(divId).offset().top - 65
+	        }, 100);
+	      });
+	    </script>
 
 	</body>
 </html>
