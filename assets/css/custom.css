@@ -2,10 +2,16 @@
 body {
   min-height: 75rem;
   padding-top: 4.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 div.page-header{
   margin-top: 1.5rem;
+}
+
+.content {
+  flex: 1 0 auto;
 }
 
 * {
