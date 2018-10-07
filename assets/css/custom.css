@@ -38,12 +38,11 @@ html {
   padding: 0.5rem;
 }
 
-
+/*margin-top: 20px; /* space between content and footer */
 .footer {
 	flex-shrink: 0;
     background-color: #efefef;
     padding-top: 10px;
-    margin-top: 20px; /* space between content and footer */
     position: relative;
 	vertical-align: middle;
     width: 100%;
