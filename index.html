@@ -39,6 +39,45 @@
 	
 		<script type="text/javascript" language="javascript" src="/assets/js/clipboard.min.js"></script>
 		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+		.card {
+		  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		  max-width: 300px;
+		  margin: auto;
+		  text-align: center;
+		  font-family: arial;
+		}
+
+		.title {
+		  color: grey;
+		  font-size: 18px;
+		}
+
+		button {
+		  border: none;
+		  outline: 0;
+		  display: inline-block;
+		  padding: 8px;
+		  color: white;
+		  background-color: #000;
+		  text-align: center;
+		  cursor: pointer;
+		  width: 100%;
+		  font-size: 18px;
+		}
+
+		a {
+		  text-decoration: none;
+		  font-size: 22px;
+		  color: black;
+		}
+
+		button:hover, a:hover {
+		  opacity: 0.7;
+		}
+		</style>
+		
 	</head>
 	
 	<body>
@@ -64,15 +103,25 @@
 		
     	<main role="main" class="container">
       
-			<div>
-					<div class="col-xs-12 col-lg-6">
-			        	<h1>Anupam Das</h1>
-						<h2>Assistant Professor, NC State University</h2>
+			<div class="row">
+					<div class="card">
+					  <img src="assets/images/Anupam_Das.jpg" alt="John" style="width:100%">
+					  <h1>John Doe</h1>
+					  <p class="title">CEO & Founder, Example</p>
+					  <p>Harvard University</p>
+					  <div style="margin: 24px 0;">
+					    <a href="#"><i class="fa fa-dribbble"></i></a> 
+					    <a href="#"><i class="fa fa-twitter"></i></a>  
+					    <a href="#"><i class="fa fa-linkedin"></i></a>  
+					    <a href="#"><i class="fa fa-facebook"></i></a> 
+					 </div>
+					 
 					</div>
+					
 					<div class="col-xs-12 col-lg-6">
 						<img src="assets/images/Anupam_Das.jpg" style="width:90%">
 					</div>
-
+					
 			</div>
 	  	  	
 	  
@@ -82,15 +131,36 @@
       	  	</div>
      	   	<p>I am an Assistant Professor in the Department of <a href="https://www.csc.ncsu.edu/">Computer Science</a> at <a href="http://www.ncsu.edu/">NC State University</a> and a member of the <a href="https://wspr.csc.ncsu.edu/">Wolfpack Security and Privacy Research (WSPR)</a> lab. I received my Ph.D. in Computer Science from the University of Illinois at Urbana-Champaign (UIUC). Prior to joining NC State University, I was a postdoctoral fellow at Carnegie Mellon University.</p>
 			
+			
 			<div id="research" class="page-header">
         		<h2>Research Interests</h2>
       	  	</div>
-			<p>I conduct research in different aspects of security and privacy with a special focus towards designing secure and privacy-preserving technologies. My current research direction focuses on exploring the security and privacy challenges in the era of Internet of Things (IoT), where I’m focusing on designing frameworks that can discover, inform and control what information is shared with different data analytics.</p><br>
+			<p>I conduct research in different aspects of security and privacy with a special focus towards designing secure and privacy-preserving technologies. My current research direction focuses on exploring the security and privacy challenges in the era of Internet of Things (IoT), where I’m focusing on designing frameworks that can discover, inform and control what information is shared with different data analytics.</p>
 			
 			<p>I'm looking for <a href="">motivated students</a> to work together on emerging security and privacy problems.</p>
 
-	
-
+				
+			<div id="news" class="page-header">
+        		<h2>Recent News</h2>
+      	  	</div>
+			<ul>
+				<li>Our paper on analyzing how sensors on smartphones are being used by websites has been accepted for presentation at CCS 2018.</li>
+				<li>Our paper on analyzing  the feasibility of using embedded sensors to fingerprint smartphones has been accepted for presentation at PoPETs/PETS 2018.</li>
+				<li>Our work on detecting XSS has been accepted for presentation at NDSS 2018.</li>
+				<li>Congrats to Junjue Wang for winning the 'Best Paper Award' at ACM MMSys 2017.</li>
+			</ul>
+				
+				
+			<div id="news" class="page-header">
+        		<h2>Recent Professional Activities</h2>
+      	  	</div>
+			<ul>
+				<li>Served as a PC member for PoPETs/PETS 2019.</li> 
+				<li>Served as a Program Co-chair for MMSys 2018  (Special Session on IoT and Smart Cities).</li>
+				<li>Served as a PC member for WWW 2018, WPES 2018, Workshop on The Bright and Dark Sides of Computer Vision (in conjunction with the 2018 IEEE CVPR), NSysS 2018.</li>
+				<li>Served as a PC member for CCS 2017.</li>
+			</ul>
+				
 			<footer class="page-footer">
 			  <div class="footer-copyright">
 			      <div class="container">
