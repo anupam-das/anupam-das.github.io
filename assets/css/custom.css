@@ -55,3 +55,14 @@ html {
 	overflow: auto;
 }
 
+
+#pdfviewer { 
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+
+    /* Since this element now uses border-box sizing, the 10px of horizontal
+       padding will be drawn inside the 80% width */
+    width: 80%;
+    padding: 0 10px;
+}
