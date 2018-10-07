@@ -39,12 +39,11 @@ html {
 }
 
 .footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
-  left: 50px;
-  right: 50px;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 0px;
   background-color: #efefef;
   text-align: center;
+  width: 100%;
 }
