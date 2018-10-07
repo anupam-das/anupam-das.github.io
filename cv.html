@@ -28,7 +28,10 @@
 					appendChild(msViewportStyle);
 			}
 		</script>
-	
+		<style>
+		      #container { overflow: auto; -webkit-overflow-scrolling: touch; height: 500px; }
+		      object { width: 500px; height: 10000px }
+		</style>
 	</head>
 	
 	<body>
@@ -62,10 +65,10 @@
 		
 		<main role="main" class="container">
 			<br>
-			
-			<div class="scroll-wrapper">
-				<iframe src="paper/CV_Anupam_Das.pdf"></iframe>
+			<div id="container">
+				<object data="paper/CV_Anupam_Das.pdf" type="application/pdf"></object>
 			</div>
+			
 		</main>
 	
 	
