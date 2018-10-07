@@ -1,1 +1,107 @@
-Hello World
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="personal webpage" content="">
+		<meta name="anupam das" content="">
+		<!-- <link rel="icon" href="../../../../favicon.ico"> -->
+
+		<title>Anupam Das: Personal Webpage</title>
+		<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- CSS to customize styles -->
+		<link href="/assets/css/custom.css" rel="stylesheet">
+		<script type="text/javascript" language="javascript" src="/assets/js/jquery-1.9.1.min.js"></script>
+		<link rel="stylesheet" href="/assets/css/jquery-ui.css" />
+		<script src="/assets/js/jquery-ui.min.js"></script>
+			<style type="text/css" title="currentStyle">
+			        @import "/assets/css/demo_table.css";
+			</style>
+
+		<script src="/assets/js/popper.min.js"></script>
+		<script src="/assets/js/bootstrap.min.js"></script>
+
+
+		<script type="text/javascript" language="javascript" src="/assets/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+				var msViewportStyle = document.createElement("style");
+				msViewportStyle.appendChild(
+					document.createTextNode(
+						"@-ms-viewport{width:auto!important}"
+					)
+				);
+				document.getElementsByTagName("head")[0].
+					appendChild(msViewportStyle);
+			}
+		</script>
+	
+		<script type="text/javascript" language="javascript" src="/assets/js/clipboard.min.js"></script>
+		
+		
+	</head>
+	
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<span class="navbar-brand d-flex flex-fill" id="brand-span">Anupam Das</span>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+				  <li class="nav-item">
+				    <a class="nav-link" href="/research.html">Research</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#contact">Contact</a>
+				  </li>
+				</ul>
+				</div>
+			</nav>
+		</header>
+		
+		
+    	<main role="main" class="container">
+      
+			<div id="about" class="page-header">
+        		<h2>About</h2>
+      	  	</div>
+     
+
+	
+
+			<footer class="page-footer">
+			  <div class="footer-copyright">
+			      <div class="container">
+			          &copy; 2018 Anupam Das
+			          <span class="text-muted small right">This page is hosted on GitHub, please see GitHub's privacy statement
+			          <a href="https://help.github.com/articles/github-privacy-statement/">here</a>.</span>
+			      </div>
+			  </div>
+			</footer>
+	
+    </main>
+
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+      $('.navbar-nav>li>a').on('click', function(){
+          $('.navbar-collapse').collapse('hide');
+      });
+      // Modified from https://stackoverflow.com/a/49331692
+      var divId;
+      $('.nav-link').click(function(){
+        divId = $(this).attr('href');
+         $('html, body').animate({
+          scrollTop: $(divId).offset().top - 65
+        }, 100);
+      });
+    </script>
+    
+
+
+  </body>
+</html>
