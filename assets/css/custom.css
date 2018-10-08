@@ -67,3 +67,18 @@ html {
   box-sizing: border-box;
 }
 
+#journalbox {
+	background: #D5F5E3; 
+}
+
+#conferencebox {
+	background: #AED6F1; 
+}
+
+#workshopbox {
+	background: #D7BDE2; 
+}
+
+#magazinebox {
+	background: #FCF3CF; 
+}
