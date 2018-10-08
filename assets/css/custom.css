@@ -71,30 +71,35 @@ html {
 	background-color: #D5F5E3; 
 	padding: 2px ;
 	border: 1px solid;
+	text-align: center;
 }
 
 .conferencebox {
 	background-color: #AED6F1; 
 	padding: 2px ;
 	border: 1px solid;
+	text-align: center;
 }
 
 .workshopbox {
 	background-color: #D7BDE2; 
 	padding: 2px ;
 	border: 1px solid;
+	text-align: center;
 }
 
 .magazinebox {
 	background-color: #FCF3CF; 
 	padding: 2px ;
 	border: 1px solid;
+	text-align: center;
 }
 
 .techreportbox {
 	background-color: #F5B7B1; 
 	padding: 2px ;
 	border: 1px solid;
+	text-align: center;
 }
 
 
