@@ -69,16 +69,24 @@ html {
 
 .journalbox {
 	background-color: #D5F5E3; 
+	padding: 2px ;
+	border: 1px solid;
 }
 
 .conferencebox {
 	background-color: #AED6F1; 
+	padding: 2px ;
+	border: 1px solid;
 }
 
 .workshopbox {
 	background-color: #D7BDE2; 
+	padding: 2px ;
+	border: 1px solid;
 }
 
 .magazinebox {
 	background-color: #FCF3CF; 
+	padding: 2px ;
+	border: 1px solid;
 }
