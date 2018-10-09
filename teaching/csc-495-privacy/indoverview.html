@@ -63,24 +63,7 @@
 		
 		<main role="main" class="container">
 			<br>
-			<h2 align='center'>Cross-site Password Analysis</h2>
-
-
-			<h3 id="description">Project description</h3>
-			<p>The objective of this project was to analysis the impact of password reuse across different web accounts. For this purpose
-			we gathered several leaked password data set and looked at the similarity of passwords used by individual users. For
-			privacy reasons we used hashed email accounts to uniquely identify users. From our data set we found that around 43% of 
-			the users were using exactly the same passwords across different websites while 19% of the users used slightly modified 
-			version of existing passwords. We then looked at the transformation rules used by the users. </p>
-				
-				
-			<h3 id="description">Study survey</h3>	
-			<p>We also conducted a <a href="https://docs.google.com/forms/d/1xSfwtaUObuTdr4ec1q8SY6-w0mrHjO1KxR7eyFxDnGw">survey</a> regarding password reuse. The survey responses are summarized <a href="https://docs.google.com/forms/d/1xSfwtaUObuTdr4ec1q8SY6-w0mrHjO1KxR7eyFxDnGw/viewanalytics#start=publishanalytics"> here </a>. The survey responses conveyed results similar to what we found from the leaked data set.</p>
-				
-			<h3 id="description">Brief summary of findings</h3>	
-			<p>We next developed the first cross-site password guessing algorithm, which is able to guess 30% of the transformed passwords within 100 attempts (10% of the transformed passwords were correctly guessed within 10 attempts) compared to just 14% for a guessing algorithm (using standard password cracking libraries) without cross-site password knowledge. This implies a real security threat as an attacker with a leaked, nonidentical password can mount an online guessing attack with orders of magnitude higher success than an attacker without a leaked password.</p>
 			
-			<p>This work is to appear at <a href="https://www.internetsociety.org/ndss2014"> NDSS 2014 </a></p>.	
 		
 		</main>
 	
@@ -109,6 +92,19 @@
 	        }, 100);
 	      });
 	    </script>
+		  
+		  
+		 <!-- Google Analytics -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-52694726-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+		 <!-- Google Analytics -->
 
 	</body>
 </html>
