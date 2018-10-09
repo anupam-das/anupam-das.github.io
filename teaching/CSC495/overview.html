@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="personal webpage" content="">
+		<meta name="anupam das" content="">
+		<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+		<title>Anupam Das: Personal Webpage</title>
+		<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- CSS to customize styles -->
+		<link href="/assets/css/custom.css" rel="stylesheet">
+		<script type="text/javascript" language="javascript" src="/assets/js/jquery-1.9.1.min.js"></script>
+		<script src="/assets/js/popper.min.js"></script>
+		<script src="/assets/js/bootstrap.min.js"></script>
+		
+		<script type="text/javascript" charset="utf-8">
+			if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+				var msViewportStyle = document.createElement("style");
+				msViewportStyle.appendChild(
+					document.createTextNode(
+						"@-ms-viewport{width:auto!important}"
+					)
+				);
+				document.getElementsByTagName("head")[0].
+					appendChild(msViewportStyle);
+			}
+		</script>
+	
+	</head>
+	
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<span class="navbar-brand d-flex flex-fill" id="brand-span"><a class="nav-link" href="https://www.anupamdas.org" style="color:grey">Anupam Das</a></span>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+				  <li class="nav-item">
+				    <a class="nav-link" href="/research.html">Research</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="/publication.html">Publications</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="/teaching.html">Teaching</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="/cv.html">Curriculum vitae</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="/#contact">Contact</a>
+				  </li>
+				</ul>
+				</div>
+			</nav>
+		</header>
+		
+		<main role="main" class="container">
+			<br>
+			<h2 align='center'>Cross-site Password Analysis</h2>
+
+
+			<h3 id="description">Project description</h3>
+			<p>The objective of this project was to analysis the impact of password reuse across different web accounts. For this purpose
+			we gathered several leaked password data set and looked at the similarity of passwords used by individual users. For
+			privacy reasons we used hashed email accounts to uniquely identify users. From our data set we found that around 43% of 
+			the users were using exactly the same passwords across different websites while 19% of the users used slightly modified 
+			version of existing passwords. We then looked at the transformation rules used by the users. </p>
+				
+				
+			<h3 id="description">Study survey</h3>	
+			<p>We also conducted a <a href="https://docs.google.com/forms/d/1xSfwtaUObuTdr4ec1q8SY6-w0mrHjO1KxR7eyFxDnGw">survey</a> regarding password reuse. The survey responses are summarized <a href="https://docs.google.com/forms/d/1xSfwtaUObuTdr4ec1q8SY6-w0mrHjO1KxR7eyFxDnGw/viewanalytics#start=publishanalytics"> here </a>. The survey responses conveyed results similar to what we found from the leaked data set.</p>
+				
+			<h3 id="description">Brief summary of findings</h3>	
+			<p>We next developed the first cross-site password guessing algorithm, which is able to guess 30% of the transformed passwords within 100 attempts (10% of the transformed passwords were correctly guessed within 10 attempts) compared to just 14% for a guessing algorithm (using standard password cracking libraries) without cross-site password knowledge. This implies a real security threat as an attacker with a leaked, nonidentical password can mount an online guessing attack with orders of magnitude higher success than an attacker without a leaked password.</p>
+			
+			<p>This work is to appear at <a href="https://www.internetsociety.org/ndss2014"> NDSS 2014 </a></p>.	
+		
+		</main>
+	
+	
+		<footer class="footer">
+			<div class="container">
+	          <span style="float:left;" class="text-muted small">&copy; 2018 Anupam Das</span>
+	          <span style="float:right;" class="text-muted small">This page is hosted on GitHub, please see GitHub's privacy statement
+	          <a href="https://help.github.com/articles/github-privacy-statement/">here</a>.</span>	
+			</div>    
+		</footer>
+		
+	    <script>
+	      $(function () {
+	        $('[data-toggle="tooltip"]').tooltip()
+	      })
+	      $('.navbar-nav>li>a').on('click', function(){
+	          $('.navbar-collapse').collapse('hide');
+	      });
+	      // Modified from https://stackoverflow.com/a/49331692
+	      var divId;
+	      $('.nav-link').click(function(){
+	        divId = $(this).attr('href');
+	         $('html, body').animate({
+	          scrollTop: $(divId).offset().top - 65
+	        }, 100);
+	      });
+	    </script>
+
+	</body>
+</html>
