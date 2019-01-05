@@ -1,0 +1,166 @@
+<html>
+<head>
+	<title>Collecting Sensor Data from Smart Phones</title>
+	<style type="text/css">body {
+  margin: 0px;
+  padding: 10px;
+  font-family: Helvetica, sans-serif;
+}
+
+th {
+  padding: 5px;
+  background-color: #EEEECC;
+}
+
+td {
+  padding: 5px;
+  background-color: #DDDDDD;
+}
+
+.padding-cell {
+  background-color: #FFFFFF;
+}
+
+.side-header-cell {
+  background-color: #BBBBBB;
+}
+
+.question {
+  margin: 0px;
+  padding: 5px;
+  font-weight: bold;
+  font-style: italic;  
+}
+.answer {
+  margin: 0px;
+  padding: 5px;
+}
+
+.unknown {
+  color: red;
+}
+	</style>
+</head>
+<body>
+<center>
+<h1>Collecting Sensor Data from Smart Devices</h1>
+<a href="#description">Project Description</a> | <a href="#faq">FAQ</a></center>
+
+<h3 id="description">Project Description</h3>
+
+<p>The object of this project is to gather sensor data of various type from smart devices. We plan to analyze the collected sensor data to characterize different aspects of user and device behavior from a security and privacy point of view.</p>
+
+<p>To gather sensor data from smart devices we have developed an android <a href="./SensorDataCollector.apk">app </a> that basically collects sensor data and periodically uploads the data to a remote server. The source code for the app if available <a href="https://bitbucket.org/anupam_das/smart-phone-sensor-data-collector">here</a>.</p>
+
+<p>We are careful in not violating user privacy and are therefore not tracking any personal data. Our project went through IRB review and since we are not collecting any personal data of users IRB office has confirmed that we do not require any IRB approval. The official IRB letter is available <a href="./14436_NHSR_01162014.pdf">here </a>.</p>
+
+<p>This experiment is in collaboration with several researchers, but the leads are <a href="http://web.engr.illinois.edu/~das17/"> Anupam Das</a>, a Ph.D. student at the University of Illinois at Urbana-Champaign, and <a href="http://mypage.iu.edu/~rahmanmd/home.html">Zahid Rahman</a>, a Ph.D. student at the Indiana University at Bloomington. This project is being supervised by Professor <a href="http://hatswitch.org/~nikita/"> Nikita Borisov</a> (Hatswitch Group) and Professor <a href="http://www.cs.uiuc.edu/~caesar/"> Matthew Caesar </a> from the University of Illinois at Urbana-Champaign.</p>
+
+<p>Feel free to <a href="mailto:das17@illinois.edu?subject=Smartphone%20Project">contact us</a> with any question or suggestion.</p>
+
+<h3 id="faq">FAQ (Frequently Anticipated Questions)</h3>
+
+<ol>
+	<li><a href="#q-whatarethebuttons">What do the buttons on the app do?</a></li>
+	<li><a href="#q-howtorun">How do I run the app?</a></li>
+	<li><a href="#q-howlong">How long will this take?</a></li>
+	<li><a href="#q-howmanyresources">How much bandwidth, external disk space, RAM, and CPU will this app consume?</a></li>
+	<li><a href="#q-privelegsrequired">What kind of permissions are required to run the app?</a></li>
+	<li><a href="#q-whereisdatastored">Where is the data stored?</a></li>
+	<li><a href="#q-whatsmeasured">What is being measured and why?</a></li>
+</ol>
+
+<div class="question" id="q-whatarethebuttons">What do the buttons on the app do?</div>
+
+<div class="answer">The App has the following three buttons-
+<ol>
+	<li>Start: starts the sensor reading process.</li>
+	<li>Stop: stops the sensor reading process but the application doesn&#39;t exit.</li>
+	<li>Exit: Terminates the app.</li>
+</ol>
+Once the app is started you can press the &quot;<em>Home</em>&quot; button to run the app in the background. However, if you press the &quot;<em>Back</em>&quot; button the process will stop (has the same effect as clicking the &quot;<em>Stop</em>&quot; button inside the app). At any point you can stop and restart the app by clicking the &quot;<em>Stop</em>&quot; and &quot;<em>Start</em>&quot; button respectively.</div>
+
+<div class="question" id="q-howtorun">How do I run the app?</div>
+
+<div class="answer">We would like participants to the run the app under the following scenarios:
+<ol>
+	<li>While the device is stable on some plain surface. For example, assume you are sitting on a chair with your smartphone lying on the table.</li>
+	<li>While the device is in some periodic motion. For example your walking/jogging with your smartphone in your pocket.</li>
+	<li>While the device is in some irregular motion. For example you are talking with your friend in speaker-mood where the smartphone may be moved in an irregular pattern.</li>
+</ol>
+</div>
+
+<div class="question" id="q-howlong">How long will this take?</div>
+
+<div class="answer">We would like to gather data for at least<strong> 5-10</strong> minutes for each of scenarios described <a href="#q-howtorun">above</a>. In other words, we would like to obtain enough data to characterize each of the above described scenarios separately.</div>
+
+<div class="question" id="q-howmanyresources">How much bandwidth, external disk space, RAM, and CPU will this app consume?</div>
+
+<div class="answer">The size of the app is 263KB. Once installed it consumes 1.01MB of disk space.
+<p>We tested our app on the following two sets-</p>
+
+<ol>
+	<li>LG Nexus 4.</li>
+	<li>Galaxy Note 2.</li>
+</ol>
+
+<p>We found the following average CPU and RAM requirements-</p>
+
+<table border="1" cellpadding="1" cellspacing="1" height="146" width="564">
+	<tbody>
+		<tr>
+			<td>Device Properties</td>
+			<td>CPU</td>
+			<td>RAM</td>
+		</tr>
+		<tr>
+			<td>LG Nexus 4 (Quad core, 1500 MHz, Krait)</td>
+			<td>10-25 %</td>
+			<td>30 MB</td>
+		</tr>
+		<tr>
+			<td>Samsung Galaxy Note 2 (1.6GHz Quad-Core Processor)</td>
+			<td>10-20 %</td>
+			<td>15 MB</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>The app generates one log file for each sensor where each log file is around 1MB in size. So at any given point in time if the device has WiFi connection then the app will use only few MB (~10MB) of space on the SD card. If WiFi connection is not available the data files are stored on the SD card in which case the space required is proportional to the amount of time it runs. We would encourage the user to run the app when it is connected to some WiFi network, so that the storage requirement is minimal.</p>
+
+<p>On our tests with the two sets we found our app uploading 8MB of data every 4 minutes, so the average bandwidth required is ~40KB/s.</p>
+</div>
+
+<div class="question" id="q-privelegsrequired">What kind of permissions are required to run the app?</div>
+
+<div class="answer">The App requires the following permissions-
+<ol>
+	<li>Storage : Temporarily stores the sensor readings in SD card before uploading them to a remote server. Once uploaded the files are deleted.</li>
+	<li>Network Communication: Needed to upload data to remote server. And check if WiFi connection is available.</li>
+	<li>Phone Identity: Needed to uniquely identify data from different devices. Identity information is hashed before sending to the remote server. So exact identity is not used. If you have any privacy concern please look inside the source code.</li>
+</ol>
+</div>
+
+<div class="question" id="q-whereisdatastored">Where is the data stored?</div>
+
+<div class="answer">Data are temporarily saved inside the SD card, but are deleted once the file is uploaded. For each sensor the app creates a logging file and whenever it finishes logging 25000 records it uploads the file to the remote server. Each file is about ~1MB in size. Sensor readings are sent out to the following server- <a href="http://datarepo.cs.illinois.edu" rel="nofollow">datarepo.cs.illinois.edu</a>. We plan to make the data public to other researchers in future.
+
+<p>*<em>We would like to point out that the app uploads data only when there is WiFi connection, otherwise it storage the files in SD card. So you may see a lot of files that are temporarily stored in absence of WiFi connection. But once it detects WiFi connection it starts uploading all previously stored files.</em>.</p>
+</div>
+
+<div class="question" id="q-whatsmeasured">What is being measured and why?</div>
+
+<div class="answer">We are measuring the sensor values under different settings. We hope to the analyze the sensor data to uniquely characterize different aspects of user and device behavior. Such characterization would be useful from both security (are you using the right device) and privacy (what information are smart devices leaking) point of view.</div>
+
+</body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52694726-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>

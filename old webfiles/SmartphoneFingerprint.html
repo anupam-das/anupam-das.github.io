@@ -1,0 +1,75 @@
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<title>Smartphone fingerprint</title>
+	<style type="text/css">body {
+  margin: 20px;
+  padding: 10px;
+  font-family: Helvetica, sans-serif;
+}
+
+th {
+  padding: 5px;
+  background-color: #EEEECC;
+}
+
+td {
+  padding: 5px;
+  background-color: #DDDDDD;
+}
+
+p{
+  text-align:justify;
+}
+
+.padding-cell {
+  background-color: #FFFFFF;
+}
+
+.side-header-cell {
+  background-color: #BBBBBB;
+}
+
+.question {
+  margin: 0px;
+  padding: 5px;
+  font-weight: bold;
+  font-style: italic;  
+}
+.answer {
+  margin: 0px;
+  padding: 5px;
+}
+
+.unknown {
+  color: red;
+}
+	</style>
+</head>
+<body>
+<center>
+<h1>Fingerprinting Smartphones</h1>
+</center>
+
+<h3 id="description">Project Description</h3>
+
+<p>The objective of this project was to determine if smartphones can be fingerprinted using the microphones and speaker embedded in them. The main idea behind this work lies on the fact that chips like microphones and speakers even if they are streamlined, some manufacturing level idiosyncrasies are bound to exist which can be extracted from low level signal features. We extract such features to uniquely distinguish 50 android phones. The details on the work can be found in our <a href="./paper/CCS2014.pdf">paper</a>. Also we have <a href="http://arxiv.org/pdf/1403.3366.pdf">technical report</a> which includes some extended description.</p>
+
+<p><u>Source Code</u>:</p>
+
+<p>The source code for our android app is available at <a href="https://bitbucket.org/anupam_das/acoustic-fingerprinting-of-smartphones/overview">app</a>.</p>
+
+<p>The code for feature extraction and selection, along with the code for classification is available upon personal request. However, we mainly utilize the <a href="https://www.jyu.fi/hum/laitokset/musiikki/en/research/coe/materials/mirtoolbox">MIRToolBox</a> to extract all the signal processing features.</p>
+
+<p>This work appeared at <a href="http://www.sigsac.org/ccs/CCS2014/pro_paper.html">CCS 2014 </a>. <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52694726-1', 'auto');
+  ga('send', 'pageview');
+
+</script></p>
+</body>
+</html>

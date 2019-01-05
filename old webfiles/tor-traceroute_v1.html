@@ -1,0 +1,281 @@
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<title>Trying Trusted Tor Traceroutes</title>
+	<style type="text/css">body {
+  margin: 0px;
+  padding: 10px;
+  font-family: Helvetica, sans-serif;
+}
+
+th {
+  padding: 5px;
+  background-color: #EEEECC;
+}
+
+td {
+  padding: 5px;
+  background-color: #DDDDDD;
+}
+
+.padding-cell {
+  background-color: #FFFFFF;
+}
+
+.side-header-cell {
+  background-color: #BBBBBB;
+}
+
+.question {
+  margin: 0px;
+  padding: 5px;
+  font-weight: bold;
+  font-style: italic;  
+}
+.answer {
+  margin: 0px;
+  padding: 5px;
+}
+
+.unknown {
+  color: red;
+}
+	</style>
+</head>
+<body>
+<center>
+<h1>Trying Trusted Tor Traceroutes</h1>
+<a href="#description">Project Description</a> | <a href="#faq">FAQ</a></center>
+
+<h3 id="description">Project Description</h3>
+
+<p><i>A similar project description was given in the <a href="https://lists.torproject.org/pipermail/tor-relays/2013-October/003113.html"> original email</a> on 10/23/13 to tor-relays@lists.torproject.org.</i></p>
+
+<p>We are running an experiment to improve Tor security. As you may be aware, the anonymity of a connection over Tor is vulnerable to an adversary who can observe it in enough places along its route. For example, traffic that crosses the same country as it enters and leaves the Tor network can potentially be deanonymized by an authority in that country who can monitor all network communication. Researchers have been working to figure out how Tor traffic gets routed over the Internet, but determining routes with high confidence has been difficult.</p>
+
+<p>To figure out where traffic travels from each Tor relay, we&#39;d like Tor relay operators to run a bunch of &quot;traceroutes&quot; &mdash; network measurements that show the paths traffic takes. This is a one-time experiment for now, but, depending on what we find out, regularly making such measurements may become a part of Tor itself. We have already gotten some results thanks to Linus Nordberg of DFRI and Moritz Bartl of torservers.net, and now we are extending it to all relay operators.</p>
+
+<p>We have written some shell scripts to automate most of the process. The easiest way to get them is with git, using the following commands:</p>
+
+<pre>
+    git clone https://bitbucket.org/anupam_das/traceroute-from-tor-relays
+    git checkout 95621d526621c03b5dd39e014239617158677c77
+</pre>
+
+<p>We have made the files from that commit available as a single archive <a href="http://www4.ncsu.edu/~adas8/traceroute-from-tor-relays-95621d526621.tar.bz2">here</a> (for Debian older scamper version 20070523n please run this <a href="http://www4.ncsu.edu/~adas8/traceroutes-debian6.sh">script</a>), and you can also download the individual files directly at the <a href="https://bitbucket.org/anupam_das/traceroute-from-tor-relays">Bitbucket repository</a>. Detailed instructions for setting up and running the experiment are in the README. sha512 hash of the source code is available <a href="http://www4.ncsu.edu/~adas8/traceroute-from-tor-relays-95621d526621.tar.bz2.sha512">here</a>.</p>
+
+<p>Basically the experiment does traceroutes to three groups: all &quot;routable IP prefixes&quot;, all Tor relays, and then all /24 subnets. These kinds of measurements are not uncommon, and they will not be done at a high rate (see <a href="#q-howmanyresources">this question</a> for details on resource consumption). By default the scripts will periodically move the results to our server via SSH, although you can keep the results around and/or not send them automatically if you wish (see the README). The traceroute data recorded is not sensitive or private at all. We plan to make the code and data public, following Tor&#39;s practice of open cooperation with the research community.</p>
+
+<p>The measurements will work best if you have the &quot;<a href="http://www.caida.org/tools/measurement/scamper/">scamper</a>&quot; tool from the Cooperative Association for Internet Data Analysis (CAIDA) installed (see the README for installation instructions). This is a standard and open-source tool that handles the many modern complexities of Internet routing measurement. If you are not able to run scamper, the script will also work with the more-common but less-accurate and slower &quot;traceroute&quot; utility. We do not currently have support for Windows relays. The output will take up around 500KB disk space if you use scamper; on the other hand if you use &quot;traceroute&quot; utility each output will be around 4MB (see <a href="#q-howmanyresources">this question</a> for details on resource consumption). Depending on whether you run scamper or traceroute the total time required varies but results for traceroutes to &quot;routable IP prefixes&quot; and all Tor relays should finish within one week (possibly earlier). We would like to request relay operators to upload those results once finished (see the README for instructions on doing so).</p>
+
+<p>This experiment is in collaboration with several researchers, but the leads are <a href="http://www4.ncsu.edu/~adas8/"> Anupam Das</a>, a Ph.D. student at the University of Illinois at Urbana-Champaign, and his advisor <a href="http://hatswitch.org/~nikita">Nikita Borisov</a>. Based on a review of the scripts of commit 4493e7c21199fcabd23e41a817599ac2bec6397b, we believe that they operate as described above. Please do read through them yourself, and let us know if you have any questions or concerns. And also feel free to <a href="mailto:tor-traceroutes@illinois.edu">contact us</a> for help or with suggestions.</p>
+
+<p>Thank you for your help in keeping Tor the &quot;king&quot; of anonymous communication.</p>
+
+<p></p>
+
+<h3 id="faq">Live Scoreboard of Participants</h3>
+
+<p>We have implemented a live scoreboard for participants to check the current status of the script running on their machines. The live scoreboard is available <a href="http://hatswitch.ece.illinois.edu/tor-traceroutes/relay_scoreboard.html">here</a>.</p>
+
+<p></p>
+
+<h3 id="faq">FAQ (Frequently Anticipated Questions)</h3>
+
+<ol>
+	<li><a href="#q-howlong">How long will this take?</a></li>
+	<li><a href="#q-howmanyresources">How much bandwidth, disk space, RAM, and CPU will this consume?</a></li>
+	<li><a href="#q-whatsmeasured">What is being measured and why?</a></li>
+	<li><a href="#q-canrunelsewhere">I&#39;m not able to run this from my Tor relay itself. Can I run it from a different machine on the same network?</a></li>
+	<li><a href="#q-whyscamper">Why is scamper so much more useful than traceroute?</a></li>
+	<li><a href="#q-istorattack">Is this a plot to attack the Tor network?</a></li>
+	<li><a href="#q-doestrafficgothroughtor">Does the traceroute traffic go through Tor?</a></li>
+	<li><a href="#q-whorunsit">Which type of relay should run this script: guard, exit, etc.?</a></li>
+	<li><a href="#q-anyabuse">Will I receive any complaints about network abuse from network administrators?</a></li>
+	<li><a href="#q-multipleruns">Will multiple runs of the script be useful?</a></li>
+</ol>
+
+<div class="question" id="q-howlong">How long will this take?</div>
+
+<div class="answer">The time to completion varies, but if you use the scamper tool we expect it to complete within <b>4 days</b>, and if you use the traceroute tool we expect it to complete within <b>24 days</b>. Also, the measurement proceeds in three phases, each of which is very useful on its own. If you choose to run the measurements without automatic upload, please send us the results of each phase when it is finished (for details on see the README). Here are detailed completion times for each phase and with different parameter settings you might select:
+
+<center>
+<table>
+	<tbody>
+		<tr>
+			<th class="padding-cell"></th>
+			<th colspan="3">Scamper completion time</th>
+			<th colspan="3">Traceroute completion time</th>
+		</tr>
+		<tr>
+			<th class="padding-cell"></th>
+			<th>PPS=1000<br />
+			(default)</th>
+			<th>PPS=500</th>
+			<th>PPS=100</th>
+			<th>PARALLEL=128<br />
+			(default)</th>
+			<th>PARALLEL=64</th>
+			<th>PARALLEL=32</th>
+		</tr>
+		<tr>
+			<td class="side-header-cell">Phase 1<br />
+			(Routable IP prefixes)</td>
+			<td>3.3 hours</td>
+			<td>6.5 hours</td>
+			<td>1.4 days</td>
+			<td>21 hours</td>
+			<td>1.6 days</td>
+			<td>3.3 days</td>
+		</tr>
+		<tr>
+			<td class="side-header-cell">Phase 2<br />
+			(Tor relays)</td>
+			<td>3.6 min</td>
+			<td>7.3 min</td>
+			<td>36.3 min</td>
+			<td>3 hours</td>
+			<td>43.5 min</td>
+			<td>1.5 hours</td>
+		</tr>
+		<tr>
+			<td class="side-header-cell">Phase 3<br />
+			(All /24 subnets)</td>
+			<td>4 days</td>
+			<td>8 days</td>
+			<td>38 days</td>
+			<td>23 days</td>
+			<td>45 days</td>
+			<td>92 days</td>
+		</tr>
+		<tr>
+			<td class="side-header-cell">Total<br />
+			(All phases)</td>
+			<td>4 days</td>
+			<td>8 days</td>
+			<td>40 days</td>
+			<td>24 days</td>
+			<td>48 days</td>
+			<td>96 days</td>
+		</tr>
+	</tbody>
+</table>
+</center>
+</div>
+
+<div class="question" id="q-howmanyresources">How much bandwidth, disk space, RAM, and CPU will this consume?</div>
+
+<div class="answer">You can adjust the rate at which the measurement is done to change bandwidth requirements. For scamper, change the PPS parameter from its default of 1000. For traceroute, change PARALLEL from its default of 128. Here is what you can expect:
+<center>
+<table>
+	<tbody>
+		<tr>
+			<th class="padding-cell"></th>
+			<th>Using Scamper</th>
+			<th>Using Traceroute</th>
+		</tr>
+		<tr>
+			<td class="side-header-cell">Bandwidth (Up/Down)<br />
+			PPS=1000, PARALLEL=128 (default)</td>
+			<td>58.6/58.6 KiBps</td>
+			<td>45/45 KiBps</td>
+		</tr>
+		<tr>
+			<td class="side-header-cell">Bandwidth (Up/Down)<br />
+			PPS=500, PARALLEL=64</td>
+			<td>29.3/29.3 KiBps</td>
+			<td>22.5/22.5 KiBps</td>
+		</tr>
+		<tr>
+			<td class="side-header-cell">Bandwidth (Up/Down)<br />
+			PPS=100, PARALLEL=32</td>
+			<td>5.86/5.86 KiBps</td>
+			<td>11.25/11.25 KiBps</td>
+		</tr>
+		<tr>
+			<td class="side-header-cell">Disk space<br />
+			DONTERASE=no (default)</td>
+			<td>300&mdash;700 KiB</td>
+			<td>1&mdash;4 MiB</td>
+		</tr>
+		<tr>
+			<td class="side-header-cell">Disk space<br />
+			DONTERASE=yes</td>
+			<td>110 MiB</td>
+			<td>500 MiB</td>
+		</tr>
+		<tr>
+			<td class="side-header-cell">RAM</td>
+			<td>16.4 MiB</td>
+			<td>1000 MiB</td>
+		</tr>
+		<tr>
+			<td class="side-header-cell">CPU</td>
+			<td>0.15 GHz</td>
+			<td>0.061 GHz</td>
+		</tr>
+	</tbody>
+</table>
+</center>
+</div>
+
+<div class="question" id="q-whatsmeasured">What is being measured and why?</div>
+
+<div class="answer">We want to know the actual routes on the Internet that traffic takes to and from Tor relays. This will help us figure out which network providers, governments, facility operators, etc. are in a position to watch Tor&#39;s traffic. Although the traffic is encrypted, the &quot;traffic pattern&quot; (how much is sent at any given time) is not altered much. This is to keep Tor speedy and efficient. However, the pattern can reveal clues about the content (e.g. <a href="http://lorre.uni.lu/~andriy/papers/acmccs-wpes11-fingerprinting.pdf">website fingerprinting</a>) or allow somebody next to the source and destination to figure out that they are talking together (e.g. <a href="http://www.ohmygodel.com/publications/usersrouted-ccs13.pdf">traffic correlation</a>). <a href="https://www.ideals.illinois.edu/handle/2142/34363">There</a> <a href="http://freehaven.net/anonbib/cache/ccs2013-usersrouted.pdf">are</a> <a href="http://freehaven.net/anonbib/cache/DBLP:conf/ccs/EdmanS09.pdf">ways</a> to infer these paths that don&#39;t use direct measurements from Tor relays, but we don&#39;t have high confidence in them, and we are running an experiment to see how much more we can learn from direct measurements. If it works well, such measurements could become part of the Tor relay program itself. The traceroute measurement is done by the <a href="http://www.caida.org/tools/measurement/scamper/">Scamper</a> tool from CAIDA (unless you opt for the standard <a href="http://linux.die.net/man/8/traceroute">traceroute</a> tool packaged in most UNIX systems). Basically, during these traceroutes, a sequence of UDP packets is sent with a time-to-live (TTL) that starts at 1 and incremented by 1 with each subsequent packet. TTLs are decremented by 1 each time they pass through an IP router. When an IP router receives a packet with a TTL of 0, it drops it and returns an ICMP &quot;Time exceeded&quot; packet, thus revealing the router to be on the route to the destination. The measurement proceeds in three phases:
+
+<ol>
+	<li>The first phase runs a traceroute to each &quot;routable IP prefix&quot;, as revealed by <a href="http://www.routeviews.org/">Route Views</a>. The list we are using (in prefix.txt) includes 491,762 prefixes, and this phase performs a traceroute to one random IP within each of them. Because of the potential for <a href="http://www.cs.umn.edu/~hopper/tissec-latency-leak.pdf">latency attacks</a>, we filter all timing information in this phase and only record IPs.</li>
+	<li>The second phase runs a traceroute to each relay in the Tor network. This helps us figure out how traffic flows inside the Tor network. We include any IP that appeared in a consensus during the week of 9/19/13-9/25/13. There are 9058 such IPs (see relay-ips.txt). We do include the latency measurements in this phase because <i>(i)</i> published latency attacks only require measuring latency of the links <i>outside</i> the Tor network, <i>(ii)</i> they are already so easy to measure by anybody (just measure the time to extend a Tor circuit between two relays), and <i>(iii)</i> the latencies will help researchers <a href="http://www-users.cs.umn.edu/~jansen/papers/tormodel-cset2012.pdf">model</a> the Tor network.</li>
+	<li>The third phase runs traceroutes to each IPv4 <a href="http://www.ripe.net/internet-coordination/press-centre/understanding-ip-addressing"> /24 subnet</a> on the Internet. Our script will perform a traceroute to a random IP within each of the 14,461,947 possible /24s (see allowed-ips.txt for a list of the ranges). Although in theory all IPs that share a prefix in our IP prefix list from Phase 1 should have the same path, we include this measurement phase because <i>(i)</i> <a href="http://en.wikipedia.org/wiki/Border_Gateway_Protocol">BGP</a> tables (and thus the IP prefixes) can change at any time, <i>(ii)</i> BGP operates at the <a href="http://en.wikipedia.org/wiki/Autonomous_System_%28Internet%29">AS</a> level, while we are interested in other path features (e.g. <a href="http://en.wikipedia.org/wiki/Internet_exchange_point">IXPs</a>) that may differ even if the AS-level path is the same, and <i>(iii)</i> routes advertised over BGP are merely promises without any verification. Then why do we start with the prefixes at all? We do because we are interested in any discrepancies between the two phases, and also because the first phase is much faster and will get us most of what we need even if the relay goes down or has to stop running the measurement over the longer term.</li>
+</ol>
+The sequence is which IPs are chosen have been randomized to prevent intermediate routers from rate-limiting ICMP responses and to reduce the chance of setting off any alarm by Intrusion Detection Systems. We have used the permutation algorithm proposed by <a href="http://preshing.com/20121224/how-to-generate-a-sequence-of-unique-random-integers/">Jeff Preshing</a>.</div>
+
+<div class="question" id="q-canrunelsewhere">I&#39;m not able to run this from my Tor relay itself. Can I run it from a different machine on the same network?</div>
+
+<div class="answer">Absolutely! If you have another machine on the same local network that you know uses the same routers applying the same routing rules, then this is just as good. We must be able to infer which Tor relays share the network with that machine, but presumably we can do so simply by assigning relays to a measurement server in the same /24.</div>
+
+<div class="question" id="q-whyscamper">Why is scamper so much more useful than traceroute?</div>
+
+<div class="answer">A couple of things that scamper does better than traceroute are <i>(i)</i> it uses the <a href="http://www.paris-traceroute.net/">Paris traceroute</a> techniques to map load-balancing (i.e. multiple) paths, and <i>(ii)</i> it implements efficient traceroute parallelization which was up to 6x faster in our tests. Scamper has been refined over many years to do exactly the kind of Internet-wide traceroute measurement that we are doing, and it has been designed by the masters of this kind of measurement, the <a href="http://www.caida.org/home/">Cooperative Association for Internet Data Analysis</a> (CAIDA).</div>
+
+<div class="question" id="q-istorattack">Is this a plot to attack the Tor network?</div>
+
+<div class="answer">No. This project is done in cooperation with the Tor Project, <a href="https://www.torproject.org/about/corepeople.html.en">Karsten Loesing</a> being the main participant from Tor. We take security very seriously, and all of the code is <a href="https://bitbucket.org/anupam_das/traceroute-from-tor-relays">open source</a> and was written to be easy to read and verify. Moreover, none of the data that we collect is considered private, as fairly accurate Internet maps and traceroute measurements are already <a href="http://www.caida.org/data/overview/">publicly available</a>, and anybody can run traceroutes to Tor relays.
+
+<p>In fact, this project is just the opposite: an attempt to <i>improve</i> Tor security. By figuring out how to accurately determine Internet routing on behalf of Tor clients, we can ultimately change the way that they connect to Tor to better protect their privacy. However, if you have a concern about security. please do <a href="mailto:tor-traceroutes@illinois.edu">contact us</a>. We are definitely open to suggested improvements!</p>
+</div>
+
+<div class="question" id="q-doestrafficgothroughtor">Does the traceroute traffic go through Tor?</div>
+
+<div class="answer">No, the traceroutes are sent directly from the relay to the destinations.</div>
+
+<div class="question" id="q-whorunsit">Which type of relay should run this script: guard, exit, bridge, etc.?</div>
+
+<div class="answer">We would like all public Tor relays to participate, that is, all normal relays but <b>not</b> bridge relays. This data will be public, and so we cannot use data from bridges. You are running a bridge only if you have <a href="https://www.torproject.org/docs/bridges.html.en#RunningABridge">specifically chosen to be a bridge</a>.
+
+<p>Guard and exit relays are particularly useful because the security issue we are investigating concerns traffic into and out of Tor. However, we believe that doing these measurements from middle relays will be useful for other kinds of security analyses, and therefore we ask every public relay to participate.</p>
+</div>
+
+<div class="question" id="q-anyabuse">Will I receive any complaints about network abuse from network administrators?</div>
+
+<div class="answer">The short answer is: probably not. We have received measurements from over 90 separate IPs, and, of these, we are aware of 2 relay operators who have had a problem with their network provider. In both cases, the provider was <a href="http://www.hetzner.de/">Hetzner</a>, which seems to automatically classify the traceroutes as a Netscan and threaten the server with disconnection if the activity doesn&#39;t stop (see the <a href="https://lists.torproject.org/pipermail/tor-relays/2014-January/003620.html">report</a>). We&#39;re trying to figure out what specifically triggers the classification to give a recommendation for this case.
+
+<p>In general, the measurements have been designed to avoid setting off any triggers for high-volume or anomalous traffic: they use a measurement methodology that is compliant with Internet protocol standards, they are not done at a very high rate, their destination ports are not &quot;interesting&quot;, they do not cover every IPv4 address (only every IPv4 /24 subnet), and their address order is randomized.</p>
+
+<div class="question" id="q-multipleruns">Will multiple runs of the script be useful?</div>
+
+<div class="answer">Yes, we encourage multiple runs of the script if possible because such measurements will potentially help us identify any temporal change in the routes taken by the traffic. ISPs often change paths based on their policy causing the traffic to take different paths. So doing multiple runs will help us narrow down the probable paths.</div>
+</div>
+
+</body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52694726-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>
