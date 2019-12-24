@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="personal webpage" content="">
+		<meta name="anupam das" content="">
+		<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+		<title>Anupam Das: Personal Webpage</title>
+		<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- CSS to customize styles -->
+		<link href="/assets/css/custom.css" rel="stylesheet">
+		<script type="text/javascript" language="javascript" src="/assets/js/jquery-1.9.1.min.js"></script>
+		<script src="/assets/js/popper.min.js"></script>
+		<script src="/assets/js/bootstrap.min.js"></script>
+		
+		<script type="text/javascript" charset="utf-8">
+			if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+				var msViewportStyle = document.createElement("style");
+				msViewportStyle.appendChild(
+					document.createTextNode(
+						"@-ms-viewport{width:auto!important}"
+					)
+				);
+				document.getElementsByTagName("head")[0].
+					appendChild(msViewportStyle);
+			}
+		</script>
+	
+	</head>
+	
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<span class="navbar-brand d-flex flex-fill" id="brand-span"><a class="nav-link" href="https://www.anupamdas.org" style="color:grey">Anupam Das</a></span>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+				  <li class="nav-item">
+				    <a class="nav-link" href="/research.html">Research</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="/publication.html">Publications</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="/teaching.html">Teaching</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="/cv.html">Curriculum vitae</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="/#contact">Contact</a>
+				  </li>
+				</ul>
+				</div>
+			</nav>
+		</header>
+		
+		<main role="main" class="container">
+			<br>
+			
+			<div class="container">
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+					  <a class="nav-link active" href="/teaching/csc-495-privacy-sp2020/overview.html">Overview</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="/teaching/csc-495-privacy-sp2020/syllabus.html">Syllabus</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="/teaching/csc-495-privacy-sp2020/schedule.html">Schedule</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="/teaching/csc-495-privacy-sp2020/assignment.html">Assignments</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="/teaching/csc-495-privacy-sp2020/projects.html">Projects</a>
+					</li>
+				</ul>
+			</div>
+			
+			<br>
+			
+			<div class="container">
+				<p>Privacy is a growing concern in our modern society. We interact and share our personal information with a wide variety of organizations, including financial and healthcare institutions, web service providers and social networks. Many times such personal information is inappropriately collected, used or shared, often without our awareness. This course introduces privacy in a broad sense, with the aim of providing students an overview of the challenging and emerging research topics in privacy.<p> 
+
+				<p>This course will expose students to many of the issues that privacy engineers, program managers, researchers and designers deal with in industry. By the end of the course, students will learn about the following areas in privacy:</p>
+				
+				<ul>
+					<li>Data privacy: the motivations for data privacy and common implementations (e.g., k-anonymity, differential privacy).</li>
+					<li>Online privacy: online tracking and anonymous communication systems.</li>
+					<li>Opportunities and implications of using AI/ML in privacy</li>
+					<li>Side-channel threats</li>
+					<li>Privacy acts: privacy regulations, frameworks and compliance/auditing tools.</li>
+					<li>Usable privacy: perceptions of privacy, privacy attitudes, privacy preferences.</li>
+				</ul>
+			</div>
+			
+			
+			<h4>Resources</h4>
+				<div class="container">
+					<ul>
+					  <li>Course announcements and online discussion will take place on <a href="https://piazza.com/class/spring2020/csc495002/home">Piazza</a> [<a href="https://piazza.com/ncsu/fall2019/csc591">Sign up</a>]</li>
+					  <li>Homework assignments are submitted via <a href="">Moodle</a></li>
+					</ul>
+				</div>
+		
+		</main>
+	
+	
+		<footer class="footer">
+			<div class="container">
+	          <span style="float:left;" class="text-muted small">&copy; 2018 Anupam Das</span>
+	          <span style="float:right;" class="text-muted small">This page is hosted on GitHub, please see GitHub's privacy statement
+	          <a href="https://help.github.com/articles/github-privacy-statement/">here</a>.</span>	
+			</div>    
+		</footer>
+		
+	    <script>
+	      $(function () {
+	        $('[data-toggle="tooltip"]').tooltip()
+	      })
+	      $('.navbar-nav>li>a').on('click', function(){
+	          $('.navbar-collapse').collapse('hide');
+	      });
+	      // Modified from https://stackoverflow.com/a/49331692
+	      var divId;
+	      $('.nav-link').click(function(){
+	        divId = $(this).attr('href');
+	         $('html, body').animate({
+	          scrollTop: $(divId).offset().top - 65
+	        }, 100);
+	      });
+	    </script>
+		  
+		  
+		 <!-- Google Analytics -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-52694726-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+		 <!-- Google Analytics -->
+
+	</body>
+</html>
