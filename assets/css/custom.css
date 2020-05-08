@@ -50,7 +50,7 @@ html {
     background-color: #efefef;
     padding-top: 10px;
     position: relative;
-	vertical-align: middle;
+	  vertical-align: middle;
     width: 100%;
 	overflow: auto;
 }
@@ -68,15 +68,18 @@ html {
 }
 
 .journalbox {
-	background-color: #D5F5E3; 
+	background-color: #77773c; 
 	padding: 2px ;
 	border: 1px solid;
 	text-align: center;
+  border: 1px groove;
+  font-weight: bold;
+  color: white;
 }
 
 .conferencebox {
 	background-color: #808080; 
-	padding: 2px ;
+	padding: 1px ;
 	border: 1px groove;
   font-weight: bold;
   color: white;
@@ -88,6 +91,9 @@ html {
 	padding: 2px ;
 	border: 1px solid;
 	text-align: center;
+  border: 1px groove;
+  font-weight: bold;
+  color: white;
 }
 
 .magazinebox {
@@ -95,6 +101,9 @@ html {
 	padding: 2px ;
 	border: 1px solid;
 	text-align: center;
+  border: 1px groove;
+  font-weight: bold;
+  color: white;
 }
 
 .techreportbox {
@@ -102,6 +111,9 @@ html {
 	padding: 2px ;
 	border: 1px solid;
 	text-align: center;
+  border: 1px groove;
+  font-weight: bold;
+  color: white;
 }
 
 
