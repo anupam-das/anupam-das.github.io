@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="personal webpage" content="">
+		<meta name="anupam das" content="">
+		<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+		<title>Anupam Das: Personal Webpage</title>
+		<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- CSS to customize styles -->
+		<link href="/assets/css/custom.css" rel="stylesheet">
+		<script type="text/javascript" language="javascript" src="/assets/js/jquery-1.9.1.min.js"></script>
+		<script src="/assets/js/popper.min.js"></script>
+		<script src="/assets/js/bootstrap.min.js"></script>
+		
+		<script type="text/javascript" charset="utf-8">
+			if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+				var msViewportStyle = document.createElement("style");
+				msViewportStyle.appendChild(
+					document.createTextNode(
+						"@-ms-viewport{width:auto!important}"
+					)
+				);
+				document.getElementsByTagName("head")[0].
+					appendChild(msViewportStyle);
+			}
+		</script>
+	
+	</head>
+	
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<span class="navbar-brand d-flex flex-fill" id="brand-span"><a class="nav-link" href="https://www.anupamdas.org" style="color:grey">Anupam Das</a></span>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+				  <li class="nav-item">
+				    <a class="nav-link" href="/research.html">Research</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="/publication.html">Publications</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="/teaching.html">Teaching</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="/cv.html">Curriculum vitae</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="/students.html">Students</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="/#contact">Contact</a>
+				  </li>
+				</ul>
+				</div>
+			</nav>
+		</header>
+		
+		<main role="main" class="container">
+			<br>
+			
+			<div class="container">
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+					  <a class="nav-link" href="/teaching/csc-433-sp2023/overview.html">Overview</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="/teaching/csc-433-sp2023/syllabus.html">Syllabus</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link active" href="/teaching/csc-433-sp2023/schedule.html">Schedule</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="/teaching/csc-433-sp2023/assignment.html">Assignments</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="/teaching/csc-433-sp2023/project.html">Project</a>
+					</li>
+				</ul>
+			</div>
+			
+			<br>
+			
+			<h3 id="schedule">Schedule</h3>
+  			 			
+
+			<div class="container">
+				<p>** Lecture topics and readings are subject to change as the semester evolves. Slides will be uploaded right after class.</p>
+
+
+			
+				<table  class="table table-striped table-bordered">
+					<thead>
+						<tr>
+						  <th>Date</th>
+						  <th>Topic</th>
+						  <th>Reading</th>
+						  <th>Note</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>01/09</td>
+							<td> Introduction and course overview </td>
+							<td> 
+								<ul>
+								<li><a href="https://plato.stanford.edu/entries/privacy/">Privacy [Stanford Encyclopedia of Philosophy]</a></li>
+								<li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=667622">A Taxonomy on Privacy</a></li>
+								<li>(Optional) <a href="https://crypto.stanford.edu/portia/papers/RevnissenbaumDTP31.pdf">Privacy as Contextual Integrity</a></li>
+								</ul>
+							</td>
+							<td>
+								<ul>
+								<li>Watch Glenn Greenwald: <a href="https://youtu.be/pcSlowAhvUk">Why privacy matters (2014) TED Talk</a></li>
+								<li>Watch Alessandro Acquisti: <a href="https://youtu.be/H_pqhMO3ZSY">Why privacy matters (2013) TED Talk</a></li>
+								</ul>
+							</td>
+						</tr>
+						
+						
+						<tr>
+							<td colspan="4" align="center" bgcolor="#ADD3E4"><b>Topic: Database Privacy</b></td>
+						</tr>
+						
+						<tr>
+							<td>01/11</td>
+							<td> Data De-anonymization </td>
+							<td>
+								<ul>
+								<li><a href="https://www.privacylives.com/wp-content/uploads/2010/01/golle-reidentification-deanonymization-2006.pdf">Revisiting the uniqueness of simple demographics in the US population</a></li>
+								<li><a href="https://ieeexplore.ieee.org/abstract/document/4531148/">Robust de-anonymization of large sparse datasets</a></li>
+								<li>(Optional) <a href="https://www.cs.utexas.edu/~shmat/shmat_oak11ymal.pdf">You Might Also Like: Privacy Risks of Collaborative Filtering</a></li>
+								<li>(Optional) <a href="https://mislove.org/publications/Inferring-WSDM.pdf">You are who you know: inferring user profiles in online social networks</a></li>
+								</ul>
+							</td>
+							<td> </td>
+						</tr>
+						
+						<tr>
+							<td>08/29</td>
+							<td> k-anonymity </td>
+							<td>
+								<ul>
+								<li><a href="https://epic.org/privacy/reidentification/Sweeney_Article.pdf">k-anonymity: A model for protecting privacy</a></li>
+								<li><a href="https://www.profsandhu.com/cs6393_s13/p49-lefevre_2005.pdf">Incognito: Efficient Full-Domain K-Anonymity</a></li>
+								</ul>
+							</td>
+							<td> </td>
+						</tr>
+
+
+						<tr>
+							<td>01/16</td>
+							<td><b>No Class</b></td>
+							<td>Martin Luther King Jr. Day</td>
+							<td></td>
+						</tr>
+						
+						<tr>
+							<td>01/18</td>
+							<td> l-diversity, t-closeness </td>
+							<td> 
+								<ul>
+								<li><a href="https://ptolemy.berkeley.edu/projects/truststc/pubs/465/L%20Diversity%20Privacy.pdf">l-diversity: Privacy beyond k-anonymity</a></li>
+								<li><a href="http://www.utdallas.edu/~mxk055100/courses/privacy08f_files/tcloseness.pdf">t-closeness: Privacy beyond k-anonymity and l-diversity</a></li>
+								</ul>
+							</td>
+							<td> </td>
+						</tr>
+
+						
+						<tr>
+							<td>01/23</td>
+							<td> Differential privacy </td>
+							<td> 
+								<ul>
+								<li><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/dwork.pdf">Differential Privacy</a></li>
+								<li>(Optional) <a href="http://www.cse.psu.edu/~duk17/papers/nflprivacy.pdf">No Free Lunch in Data Privacy</a></li>
+								<li>(Optional) <a href="https://www.microsoft.com/en-us/research/publication/differentially-private-recommender-systems-building-privacy-into-the-netflix-prize-contenders/?from=http%3A%2F%2Fresearch.microsoft.com%2Fpubs%2F80511%2Fnetflixprivacy.pdf">Differentially Private Recommender Systems: Building Privacy into the Netflix Prize Contenders</a></li>
+							</td>
+							<td><a href="http://youtube.com/watch?v=ekIL65D0R3o">Tutorial on Differential Privacy</a></td>
+						</tr>
+						
+						
+						<tr>
+							<td>01/25</td>
+							<td> Private Information Retrieval (PIR) </td>
+							<td> 
+								<ul>
+								<li><a href="https://ieeexplore.ieee.org/abstract/document/492461">Private information retrieval</a></li>
+								<li>(Optional) <a href="http://web.cs.ucla.edu/~rafail/PUBLIC/34.pdf">Replication Is Not Needed: Single Database, Computationally-Private Information Retrieval</a></li>
+								<li>(Optional) <a href="http://www.cs.umd.edu/~gasarch/papers/pirsurvey.pdf">A survey on Private Information Retrieval</a></li>
+								<li>(Optional) <a href="https://eprint.iacr.org/2007/059.pdf">A Survey of Single-Database PIR: Techniques and Applications</a></li>
+								</ul>
+							</td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td colspan="4" align="center" bgcolor="#ADD3E4"><b>Topic: Online Privacy</b></td>
+						</tr>
+
+
+						<tr>
+							<td>01/30</td>
+							<td> Online tracking: stateful </td>
+							<td>
+								<ul>
+								<li><a href="https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final17.pdf">Detecting and Defending Against Third-Party Tracking on the Web</a></li>								
+								<li>(Optional) <a href="https://chromium.woolyss.com/f/OpenWPM-1-million-site-tracking-measurement.pdf">Online tracking: A 1-million-site measurement and analysis</a></li>
+								<li>(Optional) <a href="https://ieeexplore.ieee.org/iel5/6233637/6234400/06234427.pdf">Third-party web tracking: Policy and technology</a></li>
+								</ul>
+							</td>
+							<td></td>
+						</tr>
+
+
+						<tr>
+							<td>02/01</td>
+							<td> Online tracking: stateless </td>
+							<td> 
+								<ul>
+								<li><a href="https://panopticlick.eff.org/static/browser-uniqueness.pdf">How unique is your web browser?</a></li>
+								<li>(Optional) <a href="https://ieeexplore.ieee.org/iel7/6547086/6547088/06547132.pdf">Cookieless monster: Exploring the ecosystem of web-based device fingerprinting</a></li>
+								<li>(Optional) <a href="http://cseweb.ucsd.edu/~hovav/dist/canvas.pdf">Pixel perfect: Fingerprinting canvas in HTML5</a></li>
+								<li>(Optional) <a href="https://securehomes.esat.kuleuven.be/~gacar/persistent/the_web_never_forgets.pdf">The Web Never Forgets: Persistent Tracking Mechanisms in the Wild</a></li>
+								</ul>
+							</td>
+							<td></td>
+						</tr>
+					
+						
+						<tr>
+							<td>02/06</td>
+							<td> Privacy tools for web browsing </td>
+							<td>
+								<ul>
+								<li> <a href="https://www.sba-research.org/wp-content/uploads/publications/block_me_if_you_can.pdf">Block Me If You Can: A Large-Scale Study of Tracker-Blocking Tools</a></li>
+								<li>(Optional) <a href="http://cyberlaw.stanford.edu/files/publication/files/trackingsurvey12.pdf">Third-Party Web Tracking: Policy and Technology</a></li>
+								<li>(Optional) <a href="https://www.usenix.org/system/files/login/articles/roesner.pdf">ShareMeNot: Balancing Privacy and Functionality of Third-Party Social Widgets</a></li>
+								<li>(Optional) <a href="http://www.blaseur.com/papers/CHI2012-opt-out-usability-final.pdf">Why Johnny Can't Opt Out: A Usability Evaluation of Tools to Limit Online Behavioral Advertising</a></li>
+								</ul>
+							</td>
+							<td></td>
+						</tr>
+						
+						<tr>
+							<td>02/08</td>
+							<td> Anonymous communication </td>
+							<td> 
+								<ul>
+								<li> <a href="https://dud.inf.tu-dresden.de/literatur/Anon_Terminology_v0.31.pdf">Anonymity, Unlinkability, Undetectability, Unobservability,Pseudonymity, and Identity Management – A Consolidated Proposal for Terminology</a></li>
+								<li>(Optional) <a href="http://cyberlaw.stanford.edu/files/publication/files/trackingsurvey12.pdf">Third-Party Web Tracking: Policy and Technology</a></li>
+								</ul>
+							</td>
+							<td></td>
+						</tr>
+					
+						
+						<tr>
+							<td>02/13</td>
+							<td> Tor network </td>
+							<td> 
+								<ul>
+								<li><a href="https://svn.torproject.org/svn/projects/design-paper/tor-design.pdf">Tor: The Second-Generation Onion Router</a></li>
+								<li>(Optional) <a href="https://mice.cs.columbia.edu/getTechreport.php?techreportID=1545&format=pdf">On the Effectiveness of Traffic Analysis Against Anonymity Networks Using Flow Records</a></li>
+								</ul>
+							</td>
+							<td></td>
+						</tr>
+						
+						<tr>
+							<td>02/15</td>
+							<td> Social networks and privacy </td>
+							<td>
+								<ul>
+								<li><a href="http://cups.cs.cmu.edu/soups/2012/proceedings/a9_Johnson.pdf">Facebook and Privacy: It's Complicated</a></li>
+								<li>(Optional) <a href="http://hci.stanford.edu/publications/2013/invisibleaudience/invisibleaudience.pdf">Quantifying the Invisible Audience in Social Networks</a></li>
+								<li>(Optional) <a href="http://www.cil.cnrs.fr/CIL/IMG/pdf/128836153-Silent-Listeners.pdf">Silent Listeners: The Evolution of Privacy and Disclosure on Facebook</a></li>
+								<li>(Optional) <a href="http://www.cs.indiana.edu/~kapadia/papers/loosetweets-wpes11.pdf">Loose Tweets: An Analysis of Privacy Leaks on Twitter</a></li>
+								</ul>
+							</td>
+							<td></td>
+						</tr>
+						
+						<tr>
+							<td>02/20</td>
+							<td><b>Exam Review</b></td>
+							<td>In class discussion</td>
+							<td></td>
+						</tr>
+
+						
+						<tr>
+							<td>02/22</td>
+							<td><b>Midterm Exam</b></td>
+							<td>In class exam</td>
+							<td>Topics covered upto 09/28 (inclusive)</td>
+						</tr>
+					
+
+						
+						<tr>
+							<td colspan="4" align="center" bgcolor="#ADD3E4"><b>Topic: Machine learning and Privacy</b></td>
+						</tr>
+
+
+						<tr>
+							<td>02/27</td>
+							<td> Privacy Attacks on machine learning models (part 1) </td>
+							<td> 
+								<ul>
+								<li><a href="https://www.usenix.org/system/files/conference/usenixsecurity14/sec14-paper-fredrikson-privacy.pdf">Privacy in pharmacogenetics: an end-to-end case study of personalized warfarin dosing</a></li>
+								<li> <a href="https://dl.acm.org/doi/pdf/10.1145/3243734.3243834">Property Inference Attacks on Fully Connected Neural Networks using Permutation Invariant Representations</a></li>
+								<li><a href="https://arxiv.org/pdf/2007.07646.pdf">A Survey of Privacy Attacks in Machine Learning</a></li>
+								</ul>
+							</td>
+							<td> 
+								<ul>
+									<li><a href="https://www.youtube.com/watch?v=99YHPIsKzCc">Property Inference Attacks on Fully Connected Neural Networks using Permutation Invariant Representations</a></li>
+									<li><a href="https://www.youtube.com/watch?v=c0fxn5s0Cbk">Privacy in pharmacogenetics: an end-to-end case study of personalized warfarin dosing</a></li>
+								</ul>
+							</td>
+						</tr>
+
+						<tr>
+							<td>03/01</td>
+							<td> Privacy Attacks on machine learning models  (part 2) </td>
+							<td> 
+								<ul>
+								<li><a href="https://www.comp.nus.edu.sg/~reza/files/Shokri-SP2017.pdf">Membership Inference Attacks against Machine Learning Models</a></li>
+								<li>(Optional) <a href="https://arxiv.org/abs/1306.4447">Hacking Smart Machines with Smarter Ones: How to Extract Meaningful Data from Machine Learning Classifiers</a></li>
+								<li>(Optional) <a href="https://ieeexplore.ieee.org/abstract/document/8429311">Privacy Risk in Machine Learning: Analyzing the Connection to Overfitting</a></li>
+								</ul>
+							</td>
+							<td> </td>
+						</tr>
+
+
+						<tr>
+							<td>03/06</td>
+							<td> Privacy perserving machine learning </td>
+							<td> 
+								<ul>
+								<li><a href="https://www.comp.nus.edu.sg/~reza/files/Shokri-CCS2015.pdf">Privacy-Preserving Deep Learning</a></li>
+								<li>(Optional) <a href="https://ai.googleblog.com/2017/04/federated-learning-collaborative.html">Federated Learning: Collaborative Machine Learning without Centralized Training Data</a></li>
+								</ul>
+							</td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>03/08</td>
+							<td> Fairness and auditing of automated systems </td>
+							<td> 
+								<ul>
+								<li><a href="https://cbw.sh/static/pdf/imc151-hannak.pdf">Measuring Price Discrimination and Steering on E-commerce Web Sites</a></li>
+								<li>(Optional) <a href="http://www.andrew.cmu.edu/user/danupam/dtd-pets15.pdf">Automated Experiments on Ad Privacy Settings: A Tale of Opacity, Choice, and Discrimination</a></li>
+								<li>(Optional) <a href="https://cbw.sh/static/pdf/chen-imc15.pdf">Peeking Beneath the Hood of Uber</a></li>
+								</ul>
+							</td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>03/13</td>
+							<td><b>No Class</b></td>
+							<td>Spring break</td>
+							<td></td>
+						</tr>
+
+
+							<tr>
+							<td>03/15</td>
+							<td><b>No Class</b></td>
+							<td>Spring break</td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td colspan="4" align="center" bgcolor="#ADD3E4"><b>Topic: Legal Aspects of Privacy</b></td>
+						</tr>
+
+
+						<tr>
+							<td>03/20</td>
+							<td> Privacy acts and frameworks </td>
+							<td>
+								<ul>
+								<li><a href="https://www.ecfr.gov/cgi-bin/text-idx?SID=4939e77c77a1a1a08c1cbf905fc4b409&node=16%3A1.0.1.3.36&rgn=div5">Children's Online Privacy Protection Rule (COPPA)</a></li>
+								<li><a href="https://gdpr-info.eu/">EU General Data Protection Regulation</a></li>
+								<li><a href="https://www.hhs.gov/sites/default/files/privacysummary.pdf">Summary of the HIPAA Privacy Rule</a></li>
+								<li>(Optional) <a href="https://www.consumer.ftc.gov/articles/pdf-0096-fair-credit-reporting-act.pdf">Fair Credit Reporting Act (FCRA)</a></li>
+								<li>(Optional) <a href="https://www2.ed.gov/policy/gen/guid/fpco/ferpa/index.html">Family Educational Rights and Privacy Act (FERPA)</a></li>
+								</ul>
+							</td>
+							<td> </td>
+						</tr>
+
+
+
+						<tr>
+							<td>03/22</td>
+							<td> Privacy notices </td>
+							<td>
+								<ul>
+								<li><a href="https://doi.org/10.1145/2911988">A Large-Scale Evaluation of U.S. Financial Institutions' Standardized Privacy Notices</a></li>
+								<li><a href="https://www.ftc.gov/reports/putting-disclosures-test">Putting Disclosures to the Test</a></li>
+								<li>(Optional) <a href="http://www.jthtl.org/content/articles/V10I2/JTHTLv10i2_Cranor.PDF">Necessary But Not Sufficient: Standardized Mechanisms for Privacy Notice and Choice</a></li>
+								<li>(Optional) <a href="http://lorrie.cranor.org/pubs/authors-version-PETS-formats.pdf"> A Comparative Study of Online Privacy Policies and Formats</a></li>
+								</ul>
+							</td>
+							<td> </td>
+						</tr>
+
+						<tr>
+							<td>03/27</td>
+							<td> Privacy policy compliance </td>
+							<td> 
+								<ul>
+								<li><a href="https://www.usenix.org/node/184414">Privee: An architecture for automatically analyzing web privacy policies</a></li>
+								<li>(Optional) <a href="http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2017/09/ndss2017_05A-5_Zimmeck_paper.pdf">Automated analysis of privacy requirements for mobile apps</a></li>
+								<li>(Optional) <a href="https://dl.acm.org/citation.cfm?id=3178876.3186087">An Automated Approach to Auditing Disclosure of Third-Party Data Collection in Website Privacy Policies</a></li>
+								</ul>
+							</td>
+							<td> </td>
+						</tr>
+		
+
+						<tr>
+							<td colspan="4" align="center" bgcolor="#ADD3E4"><b>Topic: Perception of Privacy</b></td>
+						</tr>
+	
+						<tr>
+							<td>03/29</td>
+							<td> Privacy index and Factors influencing privacy attitude </td>
+							<td>
+								<ul>
+								<li><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.479.9640&rep=rep1&type=pdf">Privacy Indexes: A Survey of Westin's Studies</a></li>
+								<li>(Optional) <a href="https://www.usenix.org/system/files/conference/soups2014/soups14-paper-woodruff.pdf">Would a Privacy Fundamentalist Sell Their DNA for $1000… If Nothing Bad Happened as a Result? The Westin Categories, Behavioral Intentions, and Consequences</a></li>
+								<li><a href="https://link.springer.com/chapter/10.1007/978-3-642-21599-5_11">Who is Concerned About What? A Study of American, Chinese and Indian Users’ Privacy Concerns on Social Network Sites</a></li>
+								<li><a href="https://www.usenix.org/system/files/conference/soups2017/soups2017-naeini.pdf">Privacy Expectations and Preferences in an IoT World</a></li>
+								<li>(Optional) <a href="https://arxiv.org/html/cs/9904010/report.htm">Beyond concern: Understanding net users' attitudes about online privacy</a></li>
+								<li>(Optional) <a href="https://www.usenix.org/conference/soups2015/proceedings/presentation/kang">My Data Just Goes Everywhere: User Mental Models of the Internet and Implications for Privacy and Security</a></li>
+								<li>(Optional) <a href="https://academic.oup.com/jcmc/article/15/1/83/4064812">Facebook and Online Privacy: Attitudes, Behaviors, and Unintended Consequences</a></li>
+								</ul>
+							</td>
+							<td></td>
+						</tr>
+
+
+						<tr>
+							<td>04/03</td>
+							<td> Modeling users' privacy preferences </td>
+							<td> 
+								<ul>
+								<li><a href="https://www.usenix.org/system/files/conference/soups2014/soups14-paper-lin.pdf">Modeling Users' Mobile App Privacy Preferences: Restoring Usability in a Sea of Permission Settings</a></li>
+								<li>(Optional) <a href="https://www.usenix.org/system/files/conference/soups2016/soups2016-paper-liu.pdf">Follow My Recommendations: A Personalized Assistant for Mobile App Permissions</a></li>
+								<li>(Optional) <a href="https://ieeexplore.ieee.org/document/4042536">Privacy-Aware Autonomous Agents for Pervasive Healthcare</a></li>
+								<li>(Optional) <a href="https://www.privacyassistant.org/media/publications/IEEE_magazine_2018.pdf">Personalized Privacy Assistants for the Internet of Things: Providing Users with Notice and Choice</a></li>
+								</ul>
+							</td>
+							<td> </td>
+						</tr>
+
+
+						<tr>
+							<td colspan="4" align="center" bgcolor="#ADD3E4"><b>Topic: Inference Attacks</b></td>
+						</tr>
+
+
+						<tr>
+							<td>04/05</td>
+							<td> Bitcoin and privacy </td>
+							<td> 
+								<ul>
+								<li><a href="https://bitcoin.org/bitcoin.pdf">Bitcoin</a></li>
+								<li>(Optional) <a href="https://d28rh4a8wq0iu5.cloudfront.net/bitcointech/readings/princeton_bitcoin_book.pdf">Narayanan et al. (first two chapters)</a></li>
+								</ul>
+							</td>
+							<td> Video lecture<br>
+								<a href="https://www.khanacademy.org/economics-finance-domain/core-finance/money-and-banking/bitcoin/v/bitcoin-what-is-it">bitcoin-what-is-it</a><br>
+								<a href="http://bitcoinbook.cs.princeton.edu/">bitcoin</a>
+							</td>
+						</tr>
+
+						
+						<tr>
+							<td>04/10</td>
+							<td> Network-level Inference attacks </td>
+							<td> 
+								<ul>
+								<li><a href="https://www.usenix.org/system/files/conference/usenixsecurity14/sec14-paper-wang-tao.pdf">Effective Attacks and Provable Defenses for Website Fingerprinting</a></li>
+								<li><a href="https://www.caida.org/publications/papers/2005/fingerprinting/KohnoBroidoClaffy05-devicefingerprinting.pdf">Remote physical device fingerprinting</a></li>	
+								<li>(Optional) <a href="https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/hayes">k-fingerprinting: A Robust Scalable Website Fingerprinting Technique</a></li>
+								(Optional) <a href="https://arxiv.org/abs/1708.05044">Spying on the Smart Home: Privacy Attacks and Defenses on Encrypted IoT Traffic</a></li>
+								</ul>
+							</td>
+							<td></td>
+						</tr>
+
+
+						<tr>
+							<td>04/12</td>
+							<td> Acoustic and Motion sensor based Inference attacks </td>
+							<td> 
+								<ul>
+								<li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7479068">Acoustic Side-Channel Attacks on Additive Manufacturing
+								Systems</a></li>
+								<li><a href="https://crypto.stanford.edu/gyrophone/">Gyrophone: Recognizing Speech From Gyroscope</a></li>
+								<li>(Optional) <a href="https://web.eecs.umich.edu/~genkin/teaching/fall2018/EECS598-12_files/kbdacoustic.pdf">Keyboard Acoustic Emanations</a></li>
+								<li>(Optional) <a href="http://www.buffalo.edu/content/dam/www/news/photos/2016/09/smartphone-hacks-3D-printer.pdf">My Smartphone Knows What You Print: Exploring Smartphone-based Side-channel Attacks Against 3D Printers</a></li>
+								<li>(Optional) <a href="http://www.ccs.neu.edu/home/amirali/publications/KeyStroke_Wisec_2014.pdf">Single-stroke Language-Agnostic Keylogging using Stereo-Microphones and Domain Specific Machine Learning</a></li>
+								<li><a href="https://www.usenix.org/legacy/event/hotsec11/tech/final_files/Cai.pdf?wptouch_preview_theme=enabled">TouchLogger: Inferring Keystrokes On Touch Screen From Smartphone Motion</a></li>
+								<li>(Optional) <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8141882">Systematic Classification of Side-Channel Attacks: A Case Study for Mobile Devices</a></li>
+								</ul>
+							</td>
+							<td> </td>
+						</tr>
+
+
+						<tr>
+							<td>04/17</td>
+							<td><b>Final Project Presenation </b></td>
+							<td>In class discussion</td>
+							<td></td>
+						</tr>
+						
+						<tr>
+							<td>04/19</td>
+							<td><b>Final Project Presenation </b></td>
+							<td>In class discussion</td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>04/24</td>
+							<td><b>Final Exam Review</b></td>
+							<td>In class discussion</td>
+							<td></td>
+						</tr>
+						
+						<tr>
+							<td>05/01</td>
+							<td><b>Final Exam<b></td>
+							<td>In Class (12pm to 2:30pm)</td>
+							<td>Excluding Mid-term Exam Content</td>
+						</tr>
+						
+					</tbody>
+				</table>
+		
+			</div>
+			
+			
+
+		</main>
+	
+	
+		<footer class="footer">
+			<div class="container">
+	          <span style="float:left;" class="text-muted small">&copy; 2018-2023 Anupam Das</span>
+	          <span style="float:right;" class="text-muted small">This page is hosted on GitHub, please see GitHub's privacy statement
+	          <a href="https://help.github.com/articles/github-privacy-statement/">here</a>.</span>	
+			</div>    
+		</footer>
+		
+	    <script>
+	      $(function () {
+	        $('[data-toggle="tooltip"]').tooltip()
+	      })
+	      $('.navbar-nav>li>a').on('click', function(){
+	          $('.navbar-collapse').collapse('hide');
+	      });
+	      // Modified from https://stackoverflow.com/a/49331692
+	      var divId;
+	      $('.nav-link').click(function(){
+	        divId = $(this).attr('href');
+	         $('html, body').animate({
+	          scrollTop: $(divId).offset().top - 65
+	        }, 100);
+	      });
+	    </script>
+		  
+		  
+		 <!-- Google Analytics -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-52694726-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+		 <!-- Google Analytics -->
+
+	</body>
+</html>
